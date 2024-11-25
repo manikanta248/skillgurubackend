@@ -10,7 +10,7 @@ const APP_ID = 'f3c2d6e28d7a4ccdbd047e41842e96f6';
 const APP_CERTIFICATE = 'e991452edac94c4bb6a13d133b2746f4';
 
 app.get('/generate-token', (req, res) => {
-  return res.json({ "007eJxTYDiYnfAqNsht6+9phgumWWhYPV1pLFIX9+SNZpf+FAnzyk4FhjTjZKMUs1QjixTzRJPk5JSkFAMT81QTQwsTo1RLszSzDfUu6Q2BjAwfnKsYGRkgEMRnZ0jLKS0pSS1iYAAApZkgog==" });
+  return res.json({"token": "007eJxTYDiYnfAqNsht6+9phgumWWhYPV1pLFIX9+SNZpf+FAnzyk4FhjTjZKMUs1QjixTzRJPk5JSkFAMT81QTQwsTo1RLszSzDfUu6Q2BjAwfnKsYGRkgEMRnZ0jLKS0pSS1iYAAApZkgog==" });
   const channelName = req.query.channelName;
   if (!channelName) {
     return res.status(400).json({ error: 'channelName is required' });
