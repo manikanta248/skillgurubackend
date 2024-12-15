@@ -41,13 +41,13 @@ const generateToken = (channelName) => {
 };
 
 // Function to periodically generate tokens for predefined channels
-const predefinedChannels = ['channel1', 'channel2', 'channel3']; // Add your channels here
+const predefinedChannels = ['channel1']; // Add your channels here
 const startTokenGeneration = () => {
   setInterval(() => {
     predefinedChannels.forEach((channelName) => {
       generateToken(channelName); // Generate and cache token for each channel
     });
-  }, 120000); // Run every 5 minutes (300,000 ms)
+  }, 300000); // Run every 5 minutes (300,000 ms)
 };
 
 // API endpoint to get the latest token (if needed for debugging)
