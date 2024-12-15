@@ -51,7 +51,7 @@ const startTokenGeneration = () => {
 };
 
 // API endpoint to get the latest token (if needed for debugging)
-app.get('/get-token', (req, res) => {
+app.get('/generate-token', (req, res) => {
   const channelName = req.query.channelName;
   if (!channelName) {
     return res.status(400).json({ error: 'channelName is required' });
