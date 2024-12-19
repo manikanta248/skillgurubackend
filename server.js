@@ -44,9 +44,12 @@ const generateToken = (channelName) => {
 const predefinedChannels = ['channel1']; // Add your channels here
 const startTokenGeneration = () => {
   setInterval(() => {
+    console.log(`Token generation started at: ${new Date().toISOString()}`);
     predefinedChannels.forEach((channelName) => {
-      generateToken(channelName); // Generate and cache token for each channel
+      const token = generateToken(channelName);
+      console.log(`Generated token for ${channelName}:`, token);
     });
+    console.log('Updated tokenCache:', tokenCache);
   }, 300000); // Run every 5 minutes (300,000 ms)
 };
 
